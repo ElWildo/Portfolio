@@ -1,10 +1,21 @@
-<body>
-  <a href="/">Home</a>
-  <a href="/about">About</a>
-  <h1>Blog</h1>
-  <h2>Here's the blog</h2>
+---
+const pageTitle = "Blog";
+---
 
-  <p>blog blog blog! blog, blog blog blog, blog!</p>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <h1>{pageTitle}</h1>
+    <h2>Here's the blog</h2>
 
-  <p>Lorem ipsum something something yada yada</p>
-</body>
+    <p>blog blog blog! blog, blog blog blog, blog!</p>
+
+    <p>Lorem ipsum something something yada yada</p>
+  </body>
+</html>
