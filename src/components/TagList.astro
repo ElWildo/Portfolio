@@ -6,7 +6,7 @@ const { tags } = Astro.props;
   {
     (tags as string[]).map((tag) => (
       <p>
-        <a class="tag" href={`/tags/${tag}`}>
+        <a class="tag" href={`/tags/${tag}`} data-astro-prefetch="tap">
           {tag}
         </a>
       </p>
