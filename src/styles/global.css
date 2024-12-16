@@ -50,8 +50,10 @@ h1 {
   top: 5rem;
   left: 0;
   background-color: #ff9776;
-  display: none;
+  overflow: hidden;
+  max-height: 0;
   margin: 0;
+  transition: max-height 0.5s;
 }
 
 .nav-links a {
@@ -71,7 +73,7 @@ h1 {
 }
 
 .expanded {
-  display: unset;
+  max-height: 100%;
 }
 
 html.dark {
@@ -90,6 +92,7 @@ html.dark {
     width: auto;
     background: none;
     justify-content: center;
+    max-height: 100%;
   }
 
   .nav-links a {
