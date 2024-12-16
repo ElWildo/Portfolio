@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import TagList from "../components/TagList.astro";
 import BaseLayout from "./BaseLayout.astro";
 const { frontmatter } = Astro.props;
@@ -9,12 +10,12 @@ const { frontmatter } = Astro.props;
   <p><em>{frontmatter.description}</em></p>
   <p>Written by: {frontmatter.author}</p>
   <TagList tags={frontmatter.tags} />
-  <img
+  <Image
     src={frontmatter.image.url}
     class="mainImgPost"
     width="300"
+    height="168"
     alt={frontmatter.image.alt}
-    data-astro-prefetch="tap"
   />
   <slot />
   <style>
