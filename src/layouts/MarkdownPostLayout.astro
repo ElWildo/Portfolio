@@ -9,7 +9,6 @@ const { frontmatter } = Astro.props;
   <p>{frontmatter.pubDate.toLocaleDateString()}</p>
   <p><em>{frontmatter.description}</em></p>
   <p>Written by: {frontmatter.author}</p>
-  <TagList tags={frontmatter.tags} />
   <Image
     src={frontmatter.image.url}
     class="mainImgPost"
@@ -18,6 +17,7 @@ const { frontmatter } = Astro.props;
     alt={frontmatter.image.alt}
   />
   <slot />
+  <TagList tags={frontmatter.tags} />
   <style>
     .mainImgPost {
       margin: 10px;
