@@ -25,7 +25,7 @@ Astro is interesting. It works forcing a bit the hierarchy of the project but it
 You need to have you page folder to store the folder but everything else seems pretty flexible.
 Also it works using specific type of files called .astro that are really similar to jsx code, what's a nice plus
 is that it can also run React component if you want. For this project I'm using preact a sort of light react verion.
-(Mainly because it was the polugin used in the tutorial but also because I didnt see a reason to change for
+(Mainly because it was the plugin used in the tutorial but also because I didnt see a reason to change for
 now as I haven't used any actual react yet)
 
 The website is clearly under costruction. I need to update references and remove tutorial posts, but I plan to make it a cool place to look at.
