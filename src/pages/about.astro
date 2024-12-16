@@ -2,75 +2,45 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import "../styles/global.css";
 const pageTitle = "About Me";
-const identity = {
-  firstName: "Sarah",
-  country: "Canada",
-  occupation: "Technical Writer",
-  hobbies: ["photography", "birdwatching", "baseball"],
-};
-
-const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
-
-const happy = true;
-const finished = true;
-const goal = 3;
-const skillColor = "navy";
-const fontWeight = "bold";
-const textCase = "uppercase";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <style define:vars={{ skillColor, fontWeight, textCase }}>
-    h1 {
-      color: purple;
-      font-size: 4rem;
-    }
-    .skill {
-      color: var(--skillColor);
-      font-weight: var(--fontWeight);
-      text-transform: var(--textCase);
-    }
-  </style>
-  <h2>... and my new Astro site!</h2>
+  <h2>Hello folks!</h2>
 
   <p>
-    I am working through Astro's introductory tutorial. This is the second page
-    on my website, and it's the first one I built myself!
+    My name is Francesco Wild. I'm a software and game developer. Here's some
+    fun facts about me:
   </p>
-
-  <p>
-    This site will update as I complete more of the tutorial, so keep checking
-    back and see how my journey is going!
-  </p>
-  <p>Here are a few facts about me:</p>
   <ul>
-    <li>My name is {identity.firstName}.</li>
+    <li>I'm Italian but I have been living in London since 2018</li>
+    <li>I worked for more than 4 years as Falconer</li>
     <li>
-      I live in {identity.country} and I work as a {identity.occupation}.
+      I owe my love for videogames to my grandad who made me play with him since
+      I was kid
     </li>
-    {
-      identity.hobbies.length >= 2 && (
-        <li>
-          Two of my hobbies are: {identity.hobbies[0]} and
-          {identity.hobbies[1]}
-        </li>
-      )
-    }
-  </ul>
-  <p>My skills are:</p>
-  <ul>
-    {skills.map((skill) => <li class="skill">{skill}</li>)}
+    <li>
+      I owe my love for creating stories to my dad who used to come up with new
+      spiderman stories for me
+    </li>
   </ul>
 
-  {happy && <p>I am happy to be learning Astro!</p>}
-
-  {finished && <p>I finished this tutorial!</p>}
-
-  {
-    goal === 3 ? (
-      <p>My goal is to finish in 3 days.</p>
-    ) : (
-      <p>My goal is not 3 days.</p>
-    )
-  }
+  <p>
+    I am working through building a personal blog and portfolio. This site will
+    update as I complete more projects, so keep checking back and see how my
+    journey is going!
+  </p>
+  <p>
+    I have a wide range of working experience, from web designer, a pizza-boy,
+    falconer and many others. All of these experiences contributed to build my
+    skillset and the person I am today.
+  </p>
+  <p>
+    I am passionate about technology and I love videogames, role play game,
+    movies, music and TV shows.
+  </p>
+  <p>
+    In my free time I love bringing my passions into my job developing web
+    solutions for TTRPg and small videogames in addition to content and
+    campaigns for my players.
+  </p>
 </BaseLayout>
