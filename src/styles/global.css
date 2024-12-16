@@ -68,6 +68,7 @@ h1 {
 
 .nav-links a {
   display: block;
+  position: sticky;
   text-align: center;
   padding: 10px 0;
   text-decoration: none;
@@ -96,11 +97,10 @@ html.dark {
 
 @media screen and (min-width: 636px) {
   .nav-links {
-    margin-left: 5em;
-    display: block;
-    position: static;
+    display: flex;
     width: auto;
     background: none;
+    justify-content: center;
   }
 
   .nav-links a {
