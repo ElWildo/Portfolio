@@ -1,11 +1,13 @@
 ---
 import HamburgerIcon from "./ReactComponents/HamburgerIcon";
 import Navigation from "./Navigation.astro";
+import ThemeIcon from "./ReactComponents/ThemeIcon";
 ---
 
 <header>
   <nav>
     <HamburgerIcon client:load />
     <Navigation />
+    <ThemeIcon client:only />
   </nav>
 </header>

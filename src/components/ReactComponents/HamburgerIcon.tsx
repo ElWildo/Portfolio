@@ -4,10 +4,8 @@ export default function HamburgerIcon() {
     document.querySelector(".nav-links")?.classList.toggle("expanded");
   };
   return (
-    <div class={classes.hamburger} onClick={handleToggleClick}>
-      <span class={classes.line}></span>
-      <span class={classes.line}></span>
-      <span class={classes.line}></span>
+    <div class={classes.hamburger + " platinum"} onClick={handleToggleClick}>
+      <div class={classes.menuTitle}>Menu</div>
     </div>
   );
 }

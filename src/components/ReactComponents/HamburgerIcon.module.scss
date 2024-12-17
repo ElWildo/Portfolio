@@ -1,17 +1,21 @@
 .hamburger {
-  padding-top: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   width: 100%;
+  height: calc(var(--margin-height) + 20px);
   display: flex;
+  gap: 10px;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   cursor: pointer;
-  .line {
-    display: block;
-    width: 40px;
-    height: 5px;
-    margin-bottom: 10px;
-    background-color: #ff9776;
-  }
+}
+
+.menuTitle {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  transform: scale(2, 1);
+  color: white;
 }
 
 @media screen and (min-width: 636px) {

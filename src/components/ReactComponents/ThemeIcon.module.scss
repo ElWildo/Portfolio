@@ -3,7 +3,7 @@
   background: none;
   position: absolute;
   right: 1rem;
-  bottom: 1rem;
+  top: 10px;
 }
 .sun {
   fill: black;
@@ -17,10 +17,4 @@
 }
 :global(.dark) .moon {
   fill: white;
-}
-
-@media screen and (min-width: 636px) {
-  .themeToggle {
-    bottom: 1rem;
-  }
 }
