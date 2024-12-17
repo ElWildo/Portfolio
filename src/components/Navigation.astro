@@ -1,10 +1,42 @@
 ---
-import ThemeIcon from "./ReactComponents/ThemeIcon";
+console.log(Astro.url.pathname == "/about/");
 ---
 
 <div class="nav-links platinum">
-  <a href="/" data-astro-prefetch="tap">Home</a>
-  <a href="/about/" data-astro-prefetch="tap">About</a>
-  <a href="/blog/" data-astro-prefetch="tap">Blog</a>
-  <a href="/tags/" data-astro-prefetch="tap">Tags</a>
+  {
+    Astro.url.pathname == "/" ? (
+      <a style="cursor: pointer;">Home</a>
+    ) : (
+      <a href="/" data-astro-prefetch="tap">
+        Home
+      </a>
+    )
+  }
+  {
+    Astro.url.pathname == "/about/" ? (
+      <a style="cursor: pointer;">About</a>
+    ) : (
+      <a href="/about/" data-astro-prefetch="tap">
+        About
+      </a>
+    )
+  }
+  {
+    Astro.url.pathname == "/blog/" ? (
+      <a style="cursor: pointer;">Blog</a>
+    ) : (
+      <a href="/blog/" data-astro-prefetch="tap">
+        Blog
+      </a>
+    )
+  }
+  {
+    Astro.url.pathname == "/tags/" ? (
+      <a style="cursor: pointer;">Tags</a>
+    ) : (
+      <a href="/tags/" data-astro-prefetch="tap">
+        Tags
+      </a>
+    )
+  }
 </div>
