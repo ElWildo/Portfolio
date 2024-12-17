@@ -1,5 +1,9 @@
 .hamburger {
-  padding-right: 20px;
+  padding-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   cursor: pointer;
   .line {
     display: block;
