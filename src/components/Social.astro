@@ -1,17 +1,21 @@
 ---
+import Icon from "./Icon.astro";
 const { platform, username } = Astro.props;
 let url = "";
 if (platform == "bluesky") {
   url = `https://bsky.app/profile/${username}.bsky.social`;
+} else if (platform == "linkedin") {
+  url = `https://www.linkedin.com/in/${username}/`;
 } else {
   url = `https://www.${platform}.com/${username}`;
 }
 ---
 
-<a href={url} target="_blank">{platform}</a>
+<a href={url} target="_blank"><Icon icon={platform} /></a>
 <style>
   a {
-    padding: 0.5rem 1rem;
+    display: flex;
+    padding: 0.5rem;
     color: white;
     background-color: #4c1d95;
     text-decoration: none;

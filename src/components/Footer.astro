@@ -1,17 +1,16 @@
 ---
 import Social from "./Social.astro";
-
-const platform = "github";
-const username = "withastro";
 ---
 
 <style>
   footer {
+    position: fixed;
     justify-content: center;
     display: flex;
     gap: 1rem;
     padding: 5px;
     bottom: 0;
+    left: 0;
     width: 100%;
     flex-wrap: wrap;
     background: "white";
@@ -24,4 +23,5 @@ const username = "withastro";
   <Social platform="bluesky" username="elwildo" />
   <Social platform="github" username="elWildo" />
   <Social platform="youtube" username="@elwildoloco" />
+  <Social platform="linkedin" username="francescowild" />
 </footer>
