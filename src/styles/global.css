@@ -3,10 +3,33 @@
 }
 
 html {
+  --sky-gradient: linear-gradient(
+    -45deg,
+    #94c5f8 1%,
+    #a6e6ff 70%,
+    #b1b5ea 100%
+  );
   background-color: #f1f5f9;
   font-family: sans-serif;
   height: 100%;
   scrollbar-gutter: stable;
+  background-color: black;
+  background-image: url("/assets/cloud.png"), var(--sky-gradient);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  animation: gradient 300s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 html::-webkit-scrollbar {
@@ -37,7 +60,6 @@ body {
   line-height: 1.5;
   display: flex;
   flex-direction: column;
-  /* overflow-y: scroll; */
 }
 
 header {
@@ -98,7 +120,7 @@ h1 {
 }
 
 html.dark {
-  background-color: #0d0950;
+  --sky-gradient: linear-gradient(to bottom, #020111 10%, #3a3a52 100%);
   color: #fff;
 }
 
@@ -107,18 +129,6 @@ html.dark {
 }
 
 /* Metalli Styles */
-
-@keyframes shine {
-  0% {
-    transform: translateX(-100%) translateY(-100%) rotate(30deg);
-  }
-  80% {
-    transform: translateX(-100%) translateY(-100%) rotate(30deg);
-  }
-  100% {
-    transform: translateX(100%) translateY(100%) rotate(30deg);
-  }
-}
 
 .silver {
   background: linear-gradient(to bottom, #6d9bc3, #bcc6cc, #6d9bc3);
