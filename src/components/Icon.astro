@@ -16,10 +16,7 @@ function getSVG(name: string) {
     throw new Error(`${filepath} not found`);
   }
 
-  console.log(files[filepath]["default"]);
-
   const root = parse(files[filepath]["default"]);
-
   const svg = root.querySelector("svg");
   const { attributes, innerHTML } = svg ?? {
     attributes: null,
