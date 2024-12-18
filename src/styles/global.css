@@ -1,6 +1,8 @@
 :root {
   --margin-height: 35px;
   --margin-to-border: 0.5rem;
+  --dark-font-base-color: #29415c;
+  --light-font-base-color: #c5e8f5;
 }
 
 html {
@@ -10,7 +12,7 @@ html {
     #a6e6ff 70%,
     #b1b5ea 100%
   );
-  background-color: #f1f5f9;
+  color: var(--dark-font-base-color);
   font-family: sans-serif;
   height: 100%;
   scrollbar-gutter: stable;
@@ -18,6 +20,11 @@ html {
   background-repeat: no-repeat;
   background-attachment: fixed;
   animation: gradient 300s ease infinite;
+}
+
+a {
+  color: var(--dark-font-base-color);
+  fill: var(--dark-font-base-color);
 }
 
 @keyframes gradient {
@@ -98,7 +105,6 @@ h1 {
 
 .nav-links a {
   margin: 5px calc(2 * var(--margin-to-border)) 0;
-  color: #fff;
   display: block;
   position: sticky;
   text-align: center;
@@ -108,11 +114,7 @@ h1 {
   font-weight: bold;
   text-transform: uppercase;
   width: calc(100% - 4 * var(--margin-to-border));
-}
-
-.nav-links a:hover,
-.nav-links a:focus {
-  /* background-color: #ff9776; */
+  overflow: visible;
 }
 
 .expanded {
@@ -124,12 +126,6 @@ h1 {
 ::-webkit-scrollbar {
   overflow: visible;
   width: 0;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.4);
-  border-radius: 10rem;
-  border: 1px solid #fff;
 }
 
 ::-webkit-scrollbar-track-piece:start {
@@ -155,11 +151,12 @@ h1 {
 
 html.dark {
   --sky-gradient: linear-gradient(to bottom, #020111 10%, #3a3a52 100%);
-  color: #fff;
+  color: var(--light-font-base-color);
 }
 
-.dark .nav-links a {
-  color: #fff;
+.dark a {
+  color: var(--light-font-base-color);
+  fill: var(--light-font-base-color);
 }
 
 /* Desktop Layout variations */
