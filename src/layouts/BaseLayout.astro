@@ -16,9 +16,11 @@ const { pageTitle } = Astro.props;
     <ClientRouter />
   </head>
   <body>
-    <div class="content" transition:animate="slide">
-      <h1>{pageTitle}</h1>
-      <slot />
+    <div class="content-container" transition:animate="slide">
+      <div class="content" transition:animate="slide">
+        <h1>{pageTitle}</h1>
+        <slot />
+      </div>
     </div>
     <Header />
     <Footer />

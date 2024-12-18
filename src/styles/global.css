@@ -32,37 +32,46 @@ html {
   }
 }
 
-html::-webkit-scrollbar {
+body {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  line-height: 1.5;
+}
+.content-container {
+  margin: 0 auto;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: calc(100% - 110px);
+  top: calc(var(--margin-height) + 1.5rem);
+  overflow-y: scroll;
+}
+
+.content-container::-webkit-scrollbar {
   overflow: visible;
   width: 0;
 }
-html::-webkit-scrollbar-thumb {
+.content-container::-webkit-scrollbar-thumb {
   background-color: rgba(0, 0, 0, 0.4);
   border-radius: 10rem;
   border: 1px solid #fff;
 }
 
-html::-webkit-scrollbar-track-piece:start {
+.content-container::-webkit-scrollbar-track-piece:start {
   background: transparent;
 }
 
-html::-webkit-scrollbar-track-piece:end {
+.content-container::-webkit-scrollbar-track-piece:end {
   background: transparent;
-}
-
-body {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 80ch;
-  padding-top: calc(var(--margin-height) + 1rem);
-  padding-bottom: 3rem;
-  line-height: 1.5;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
 }
 
 .content {
+  width: 100%;
+  max-width: 80ch;
+  flex-grow: 1;
   padding: 1rem;
   margin: 1rem;
   background: rgba(255, 255, 255, 0.29);
@@ -71,7 +80,6 @@ body {
   backdrop-filter: blur(12.9px);
   -webkit-backdrop-filter: blur(12.9px);
   border: 1px solid rgba(255, 255, 255, 0.61);
-  height: 100%;
 }
 
 header {
