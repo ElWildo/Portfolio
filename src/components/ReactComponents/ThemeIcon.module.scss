@@ -6,7 +6,7 @@
   top: calc(var(--margin-to-border) + 10px);
 }
 .sun {
-  fill: black;
+  fill: var(--dark-font-base-color);
 }
 .moon {
   fill: transparent;
@@ -16,5 +16,5 @@
   fill: transparent;
 }
 :global(.dark) .moon {
-  fill: white;
+  fill: var(--light-font-base-color);
 }
