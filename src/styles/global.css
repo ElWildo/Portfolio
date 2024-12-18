@@ -13,7 +13,6 @@ html {
   font-family: sans-serif;
   height: 100%;
   scrollbar-gutter: stable;
-  background-color: black;
   background-image: url("/assets/cloud.png"), var(--sky-gradient);
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -50,21 +49,22 @@ body {
   overflow-y: scroll;
 }
 
-.content-container::-webkit-scrollbar {
+::-webkit-scrollbar {
   overflow: visible;
   width: 0;
 }
-.content-container::-webkit-scrollbar-thumb {
+
+::-webkit-scrollbar-thumb {
   background-color: rgba(0, 0, 0, 0.4);
   border-radius: 10rem;
   border: 1px solid #fff;
 }
 
-.content-container::-webkit-scrollbar-track-piece:start {
+::-webkit-scrollbar-track-piece:start {
   background: transparent;
 }
 
-.content-container::-webkit-scrollbar-track-piece:end {
+::-webkit-scrollbar-track-piece:end {
   background: transparent;
 }
 
