@@ -1,7 +1,9 @@
 .hamburger {
+  margin: var(--margin-to-border) var(--margin-to-border) 0
+    var(--margin-to-border);
   padding-top: 10px;
   padding-bottom: 10px;
-  width: 100%;
+  width: calc(100% - 2 * var(--margin-to-border));
   height: calc(var(--margin-height) + 20px);
   display: flex;
   gap: 10px;

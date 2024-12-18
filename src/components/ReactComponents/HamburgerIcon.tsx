@@ -4,7 +4,7 @@ export default function HamburgerIcon() {
     document.querySelector(".nav-links")?.classList.toggle("expanded");
   };
   return (
-    <div class={classes.hamburger + " platinum"} onClick={handleToggleClick}>
+    <div class={classes.hamburger + " glass"} onClick={handleToggleClick}>
       <div class={classes.menuTitle}>Menu</div>
     </div>
   );

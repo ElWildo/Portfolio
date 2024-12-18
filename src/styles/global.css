@@ -1,5 +1,6 @@
 :root {
   --margin-height: 35px;
+  --margin-to-border: 0.5rem;
 }
 
 html {
@@ -49,37 +50,12 @@ body {
   overflow-y: scroll;
 }
 
-::-webkit-scrollbar {
-  overflow: visible;
-  width: 0;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.4);
-  border-radius: 10rem;
-  border: 1px solid #fff;
-}
-
-::-webkit-scrollbar-track-piece:start {
-  background: transparent;
-}
-
-::-webkit-scrollbar-track-piece:end {
-  background: transparent;
-}
-
 .content {
   width: calc(100% - 2rem);
   max-width: 80ch;
   flex-grow: 1;
   padding: 1rem;
   margin: 1rem;
-  background: rgba(255, 255, 255, 0.29);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(12.9px);
-  -webkit-backdrop-filter: blur(12.9px);
-  border: 1px solid rgba(255, 255, 255, 0.61);
 }
 
 header {
@@ -109,6 +85,8 @@ h1 {
 
 .nav-links {
   position: sticky;
+  display: flex;
+  flex-direction: column;
   width: 100%;
   top: calc(var(--margin-height) + 20px);
   left: 0;
@@ -119,6 +97,7 @@ h1 {
 }
 
 .nav-links a {
+  margin: 5px calc(2 * var(--margin-to-border)) 0;
   color: #fff;
   display: block;
   position: sticky;
@@ -128,6 +107,7 @@ h1 {
   font-size: 1.2rem;
   font-weight: bold;
   text-transform: uppercase;
+  width: calc(100% - 4 * var(--margin-to-border));
 }
 
 .nav-links a:hover,
@@ -139,45 +119,66 @@ h1 {
   max-height: 100%;
 }
 
+/* Scrollbar styles */
+
+::-webkit-scrollbar {
+  overflow: visible;
+  width: 0;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 10rem;
+  border: 1px solid #fff;
+}
+
+::-webkit-scrollbar-track-piece:start {
+  background: transparent;
+}
+
+::-webkit-scrollbar-track-piece:end {
+  background: transparent;
+}
+
+/* Material Styles */
+
+.glass {
+  background: rgba(255, 255, 255, 0.29);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(12.9px);
+  -webkit-backdrop-filter: blur(12.9px);
+  border: 1px solid rgba(255, 255, 255, 0.61);
+}
+
+/* Dark Theme variations */
+
 html.dark {
   --sky-gradient: linear-gradient(to bottom, #020111 10%, #3a3a52 100%);
   color: #fff;
-}
-
-.dark .content {
-  padding: 0.5rem;
 }
 
 .dark .nav-links a {
   color: #fff;
 }
 
-/* Metalli Styles */
-
-.silver {
-  background: linear-gradient(to bottom, #6d9bc3, #bcc6cc, #6d9bc3);
-}
-
-.gold {
-  background: linear-gradient(to bottom, #c39738, #deb761, #c39738);
-}
-
-.platinum {
-  background: linear-gradient(to bottom right, #6d9bc3, #bcc6cc, #6d9bc3);
-  border: solid 1px #6d9bc3;
-}
+/* Desktop Layout variations */
 
 @media screen and (min-width: 636px) {
   .nav-links {
     position: unset;
-    display: flex;
-    width: auto;
+    flex-direction: row;
     justify-content: center;
+    gap: 20px;
+    align-items: center;
+    width: auto;
     max-height: 100%;
   }
 
   .nav-links a {
     display: inline-block;
-    padding: 15px 20px;
+    width: auto;
+    margin: calc(var(--margin-to-border) / 2) 0 0 0;
+    padding: 15px 30px;
   }
 }

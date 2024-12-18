@@ -3,7 +3,7 @@
   background: none;
   position: absolute;
   right: 1rem;
-  top: 10px;
+  top: calc(var(--margin-to-border) + 10px);
 }
 .sun {
   fill: black;

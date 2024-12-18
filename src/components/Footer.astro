@@ -4,6 +4,8 @@ import Social from "./Social.astro";
 
 <style>
   footer {
+    margin: 0 var(--margin-to-border) var(--margin-to-border)
+      var(--margin-to-border);
     position: fixed;
     justify-content: center;
     display: flex;
@@ -11,13 +13,13 @@ import Social from "./Social.astro";
     padding: 5px;
     bottom: 0;
     left: 0;
-    width: 100%;
+    width: calc(100% - 2 * var(--margin-to-border));
     flex-wrap: wrap;
     background: "white";
     margin-top: auto;
   }
 </style>
-<footer class="platinum" transition:animate="none">
+<footer class="glass" transition:animate="none">
   <Social platform="facebook" username="Wild.Uncommon" />
   <Social platform="instagram" username="iamelwildo" />
   <Social platform="bluesky" username="elwildo" />

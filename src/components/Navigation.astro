@@ -2,39 +2,47 @@
 
 ---
 
-<div class="nav-links platinum">
+<div class="nav-links">
   {
     Astro.url.pathname == "/" ? (
-      <a style="cursor: pointer;">Home</a>
+      <a class="glass" style="cursor: pointer;">
+        Home
+      </a>
     ) : (
-      <a href="/" data-astro-prefetch="tap">
+      <a class="glass" href="/" data-astro-prefetch="tap">
         Home
       </a>
     )
   }
   {
     Astro.url.pathname == "/about/" ? (
-      <a style="cursor: pointer;">About</a>
+      <a class="glass" style="cursor: pointer;">
+        About
+      </a>
     ) : (
-      <a href="/about/" data-astro-prefetch="tap">
+      <a class="glass" href="/about/" data-astro-prefetch="tap">
         About
       </a>
     )
   }
   {
     Astro.url.pathname == "/blog/" ? (
-      <a style="cursor: pointer;">Blog</a>
+      <a class="glass" style="cursor: pointer;">
+        Blog
+      </a>
     ) : (
-      <a href="/blog/" data-astro-prefetch="tap">
+      <a class="glass" href="/blog/" data-astro-prefetch="tap">
         Blog
       </a>
     )
   }
   {
     Astro.url.pathname == "/tags/" ? (
-      <a style="cursor: pointer;">Tags</a>
+      <a class="glass" style="cursor: pointer;">
+        Tags
+      </a>
     ) : (
-      <a href="/tags/" data-astro-prefetch="tap">
+      <a class="glass" href="/tags/" data-astro-prefetch="tap">
         Tags
       </a>
     )
