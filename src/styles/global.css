@@ -13,7 +13,7 @@ html {
     #b1b5ea 100%
   );
   color: var(--dark-font-base-color);
-  font-family: sans-serif;
+  font-family: "Nunito", sans-serif;
   height: 100%;
   scrollbar-gutter: stable;
   background-image: url("/assets/cloud.png"), var(--sky-gradient);
