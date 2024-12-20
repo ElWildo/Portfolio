@@ -4,6 +4,8 @@ const { platform, username } = Astro.props;
 let url = "";
 if (platform == "bluesky") {
   url = `https://bsky.app/profile/${username}.bsky.social`;
+} else if (platform == "email") {
+  url = `mailto:${username}@gmail.com`;
 } else if (platform == "linkedin") {
   url = `https://www.linkedin.com/in/${username}/`;
 } else {
