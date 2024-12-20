@@ -1,4 +1,4 @@
-import classes from "./HamburgerIcon.module.scss";
+import classes from "../../styles/HamburgerIcon.module.scss";
 export default function HamburgerIcon() {
   const handleToggleClick = () => {
     document.querySelector(".nav-links")?.classList.toggle("expanded");

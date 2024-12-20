@@ -1,5 +1,5 @@
 import { useEffect, useState } from "preact/hooks";
-import classes from "./ThemeIcon.module.scss";
+import classes from "../../styles/ThemeIcon.module.scss";
 
 export default function ThemeIcon() {
   const [theme, setTheme] = useState<string>();
