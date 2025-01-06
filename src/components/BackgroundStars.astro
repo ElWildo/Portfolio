@@ -15,7 +15,6 @@
   $numStarOneStars: 6800;
   $numStarTwoStars: 2800;
   $numStarThreeStars: 800;
-  $numComet: 10;
 
   @mixin star-template($numStars, $starSize, $scrollSpeed) {
     z-index: 10;
@@ -35,23 +34,6 @@
       background: transparent;
       box-shadow: create-stars($numStars);
     }
-  }
-
-  @mixin shooting-star-template($numStars, $starSize, $speed) {
-    z-index: 10;
-    width: $starSize;
-    height: $starSize + 80px;
-    border-top-left-radius: 50%;
-    border-top-right-radius: 50%;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    background: linear-gradient(
-      to top,
-      rgba(255, 255, 255, 0),
-      rgba(255, 255, 255, 1)
-    );
-    animation: animShootingStar $speed linear infinite;
   }
 
   @function create-stars($n) {
@@ -74,9 +56,6 @@
     }
     .stars3 {
       @include star-template($numStarThreeStars, 3px, $starThreeScrollDuration);
-    }
-    .comet {
-      @include shooting-star-template($numComet, 5px, 10s);
     }
   }
 
@@ -130,20 +109,6 @@
     }
   }
 
-  @keyframes animShootingStar {
-    from {
-      transform: translateY(0px) translateX(0px) rotate(-45deg);
-      opacity: 1;
-      height: 5px;
-    }
-    to {
-      transform: translateY(-#{$starFieldHeight}px)
-        translateX(-#{$starFieldWidth}px) rotate(-45deg);
-      opacity: 1;
-      height: 800px;
-    }
-  }
-
   @keyframes orbiting {
     0% {
       transform: rotate(180deg) scale(1);
@@ -166,4 +131,3 @@
 <div class="stars"></div>
 <div class="stars2"></div>
 <div class="stars3"></div>
-<div class="comet"></div>
