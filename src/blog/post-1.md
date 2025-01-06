@@ -4,7 +4,7 @@ pubDate: 2024-11-12
 description: "This is the first post of my new blog."
 author: "Francesco Wild"
 image:
-  url: "https://docs.astro.build/assets/rose.webp"
+  url: "/assets/defaultBlogImage.png"
   alt: "The Astro logo on a dark background with a pink glow."
 tags: ["Astro", "Blogging", "Development", "Typescript", "React", "SSG"]
 ---

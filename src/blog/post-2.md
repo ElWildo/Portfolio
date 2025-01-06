@@ -4,7 +4,7 @@ pubDate: 2024-12-13
 description: "Refactoring the blog and cleaning up tutorial bits remaining"
 author: "Francesco Wild"
 image:
-  url: "https://docs.astro.build/assets/rose.webp"
+  url: "/assets/defaultBlogImage.png"
   alt: "The Astro logo on a dark background with a pink glow."
 tags: ["Astro", "Blogging", "Development", "Typescript", "React", "SSG"]
 ---

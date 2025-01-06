@@ -4,7 +4,7 @@ pubDate: 2024-12-18
 description: "Refactoring layout and style to achieve a specific visual vibe"
 author: "Francesco Wild"
 image:
-  url: "https://docs.astro.build/assets/rose.webp"
+  url: "/assets/defaultBlogImage.png"
   alt: "The Astro logo on a dark background with a pink glow."
 tags:
   ["Astro", "Blogging", "Development", "Typescript", "CSS", "Animation", "SASS"]
