@@ -17,8 +17,8 @@ const pageTitle = "My Blog";
       allPosts
         .sort((a, b) => {
           return (
-            new Date(b.data.pubDate).getUTCDate() -
-            new Date(a.data.pubDate).getUTCDate()
+            new Date(b.data.pubDate).getTime() -
+            new Date(a.data.pubDate).getTime()
           );
         })
         .map((post: { id: any; data: any }) => {
