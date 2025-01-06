@@ -5,7 +5,7 @@ description: "This is the first post of my new blog."
 author: "Francesco Wild"
 image:
   url: "/assets/defaultBlogImage.png"
-  alt: "The Astro logo on a dark background with a pink glow."
+  alt: "My initials in grey on a white circle background"
 tags: ["Astro", "Blogging", "Development", "Typescript", "React", "SSG"]
 ---
 

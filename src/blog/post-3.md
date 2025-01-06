@@ -5,7 +5,7 @@ description: "Refactoring layout and style to achieve a specific visual vibe"
 author: "Francesco Wild"
 image:
   url: "/assets/defaultBlogImage.png"
-  alt: "The Astro logo on a dark background with a pink glow."
+  alt: "My initials in grey on a white circle background"
 tags:
   ["Astro", "Blogging", "Development", "Typescript", "CSS", "Animation", "SASS"]
 ---

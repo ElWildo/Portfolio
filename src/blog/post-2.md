@@ -5,7 +5,7 @@ description: "Refactoring the blog and cleaning up tutorial bits remaining"
 author: "Francesco Wild"
 image:
   url: "/assets/defaultBlogImage.png"
-  alt: "The Astro logo on a dark background with a pink glow."
+  alt: "My initials in grey on a white circle background"
 tags: ["Astro", "Blogging", "Development", "Typescript", "React", "SSG"]
 ---
 
