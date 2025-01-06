@@ -1,6 +1,9 @@
 .blogListHeader {
   margin: unset;
   width: 100%;
+  max-width: 80ch;
+  flex-grow: 1;
+  padding: 1rem;
 }
 
 .blogList {

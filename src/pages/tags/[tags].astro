@@ -28,7 +28,7 @@ const { posts, tags } = Astro.props;
 ---
 
 <BlogPostListLayout pageTitle={tag}>
-  <div class={`content glass ${classes.blogListHeader}`}>
+  <div class={`glass ${classes.blogListHeader}`}>
     <h1>{tag}</h1>
     <TagList tags={tags} />
     <p>Posts tagged with {tag}</p>
