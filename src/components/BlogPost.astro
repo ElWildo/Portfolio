@@ -1,5 +1,16 @@
 ---
-const { title, url } = Astro.props;
+import classes from "../styles/BlogPost.module.scss";
+const { title, url, description, date, image } = Astro.props;
 ---
 
-<li><a href={url} data-astro-prefetch="tap">{title}</a></li>
+<div class={`glass ${classes.BlogPreviewContainer}`}>
+  <h2 class={`${classes.title}`}>{title}</h2>
+  {image.url && <img class={`${classes.image}`} src={image.url} />}
+  <p>{description}</p>
+  <div class={`${classes.bottomRow}`}>
+    <p>{date.toString().slice(4, 15)}</p>
+    <a class={`${classes.buttonReadMore}`} href={url} data-astro-prefetch="tap"
+      >Read more...</a
+    >
+  </div>
+</div>

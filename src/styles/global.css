@@ -161,6 +161,9 @@ html.dark {
   color: var(--light-font-base-color);
   fill: var(--light-font-base-color);
 }
+.dark .tag {
+  background-color: rgba(0, 0, 0, 0.5);
+}
 
 /* Desktop Layout variations */
 

@@ -1,18 +1,37 @@
 ---
+import BlogPostListLayout from "src/layouts/BlogPostListLayout.astro";
 import BlogPost from "../components/BlogPost.astro";
-import BaseLayout from "../layouts/BaseLayout.astro";
 import { getCollection } from "astro:content";
+import classes from "../styles/blog.module.scss";
 const allPosts = await getCollection("blog");
 const pageTitle = "My Blog";
 ---
 
-<BaseLayout pageTitle={pageTitle}>
-  <p>This is where I will post about my journey in software and game dev.</p>
-  <ul>
+<BlogPostListLayout>
+  <div class={`content glass ${classes.blogListHeader}`}>
+    <h1>{pageTitle}</h1>
+    <p>This is where I will post about my journey in software and game dev.</p>
+  </div>
+  <div class={`${classes.blogList}`}>
     {
-      allPosts.map((post: any) => (
-        <BlogPost url={`/posts/${post.id}/`} title={post.data.title} />
-      ))
+      allPosts
+        .sort((a, b) => {
+          return (
+            new Date(b.data.pubDate).getUTCDate() -
+            new Date(a.data.pubDate).getUTCDate()
+          );
+        })
+        .map((post: { id: any; data: any }) => {
+          return (
+            <BlogPost
+              url={`/posts/${post.id}/`}
+              title={post.data.title}
+              description={post.data.description}
+              date={post.data.pubDate}
+              image={post.data.image}
+            />
+          );
+        })
     }
-  </ul>
-</BaseLayout>
+  </div>
+</BlogPostListLayout>

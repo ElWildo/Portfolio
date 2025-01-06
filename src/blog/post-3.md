@@ -1,6 +1,6 @@
 ---
 title: "Blog Style update"
-pubDate: 2024-18-04
+pubDate: 2024-12-18
 description: "Refactoring layout and style to achieve a specific visual vibe"
 author: "Francesco Wild"
 image:

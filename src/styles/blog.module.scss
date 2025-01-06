@@ -1,0 +1,12 @@
+.blogListHeader {
+  margin: unset;
+  width: 100%;
+}
+
+.blogList {
+  margin: 1rem 0;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}

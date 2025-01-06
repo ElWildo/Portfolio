@@ -1,6 +1,6 @@
 ---
 title: "Blog Clean Up"
-pubDate: 2024-13-04
+pubDate: 2024-12-13
 description: "Refactoring the blog and cleaning up tutorial bits remaining"
 author: "Francesco Wild"
 image:

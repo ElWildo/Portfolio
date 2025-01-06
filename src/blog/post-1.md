@@ -1,6 +1,6 @@
 ---
 title: "My First Blog Post"
-pubDate: 2024-12-04
+pubDate: 2024-11-12
 description: "This is the first post of my new blog."
 author: "Francesco Wild"
 image:

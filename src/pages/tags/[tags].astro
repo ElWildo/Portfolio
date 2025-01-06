@@ -1,8 +1,9 @@
 ---
 import { getCollection } from "astro:content";
-import BaseLayout from "../../layouts/BaseLayout.astro";
 import BlogPost from "../../components/BlogPost.astro";
 import TagList from "../../components/TagList.astro";
+import BlogPostListLayout from "src/layouts/BlogPostListLayout.astro";
+import classes from "../../styles/blog.module.scss";
 
 export async function getStaticPaths() {
   const allPosts = await getCollection("blog");
@@ -26,14 +27,30 @@ const { tags: tag } = Astro.params;
 const { posts, tags } = Astro.props;
 ---
 
-<BaseLayout pageTitle={tag}>
-  <TagList tags={tags} />
-  <p>Posts tagged with {tag}</p>
-  <ul>
+<BlogPostListLayout pageTitle={tag}>
+  <div class={`content glass ${classes.blogListHeader}`}>
+    <h1>{tag}</h1>
+    <TagList tags={tags} />
+    <p>Posts tagged with {tag}</p>
+  </div>
+  <div class={`${classes.blogList}`}>
     {
-      posts.map((post: { id: any; data: { title: unknown } }) => (
-        <BlogPost url={`/posts/${post.id}/`} title={post.data.title} />
-      ))
+      posts
+        .sort((a, b) => {
+          return (
+            new Date(b.data.pubDate).getUTCDate() -
+            new Date(a.data.pubDate).getUTCDate()
+          );
+        })
+        .map((post: { id: any; data: any }) => (
+          <BlogPost
+            url={`/posts/${post.id}/`}
+            title={post.data.title}
+            description={post.data.description}
+            date={post.data.pubDate}
+            image={post.data.image}
+          />
+        ))
     }
-  </ul>
-</BaseLayout>
+  </div>
+</BlogPostListLayout>
